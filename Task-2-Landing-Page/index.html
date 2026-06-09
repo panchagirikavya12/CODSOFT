@@ -1,1 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickBite - Fresh Food in 30 Mins</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+    }
+    header {
+        background: #FF6B35;
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav h2 {
+        font-size: 1.8rem;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .hero {
+        background: #FFF3E0;
+        text-align: center;
+        padding: 80px 20px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        color: #D84315;
+        margin-bottom: 20px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #555;
+    }
+    button {
+        background: #FF6B35;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: bold;
+        margin: 5px;
+    }
+    section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #D84315;
+    }
+    .card-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .card {
+        background: white;
+        border: 2px solid #FFE0B2;
+        border-radius: 10px;
+        padding: 25px 20px;
+        width: 250px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+        color: #FF6B35;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+    .card p {
+        color: #666;
+        font-size: 0.9rem;
+    }
+    #download {
+        background: #FFF3E0;
+    }
+    #download p {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+    footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            gap: 15px;
+        }
+        nav ul {
+            gap: 15px;
+        }
+        .hero h1 {
+            font-size: 2rem;
+        }
+        .card {
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+<nav>
+<h2>🍔 QuickBite</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#features">Why Us</a></li>
+<li><a href="#dishes">Popular</a></li>
+<li><a href="#download">Get App</a></li>
+</ul>
+</nav>
+</header>
+<section class="hero" id="home">
+ <h1>Hungry? Get Food Delivered in 30 Minutes </h1>
+ <p>
+ Order from 600+ top restaurants near you. Hot meals, cold drinks, sweet desserts - 
+ all delivered fresh to your door. First order = 50% OFF.
+ </p>
+ <a href="#download">
+ <button>Order Now</button>
+ </a>
+</section>
+<section id="features">
+ <h2>Why 2 Lakh+ People Choose QuickBite</h2>
+ <div class="card-container">
+ <div class="card">
+   <h3>Superfast Delivery</h3>
+   <p>Average delivery time 28 minutes. Late? Get ₹100 cashback instantly.</p>
+ </div>
+ <div class="card">
+   <h3>No Min Order</h3>
+   <p>Order 1 samosa or full biryani. No minimum order value needed.</p>
+ </div>
+ <div class="card">
+   <h3>Live GPS Tracking</h3>
+   <p>Watch your delivery partner come to you in real-time on the map.</p>
+ </div>
+ <div class="card">
+   <h3>100% Safe Packaging</h3>
+   <p>Sealed, tamper-proof packaging. Sanitized delivery partners.</p>
+ </div>
+ </div>
+</section>
+<section id="dishes">
+<h2>Top Picks In Your City</h2>
+<div class="card-container">
+ <div class="card">
+   <h3>Spicy Chicken Biryani</h3>
+   <p>Starts at ₹149</p>
+ </div>
+ <div class="card">
+   <h3>Cheese Burst Pizza</h3>
+   <p>Starts at ₹199</p>
+ </div>
+ <div class="card">
+   <h3>Crispy Veg Burger</h3>
+   <p>Starts at ₹89</p>
+ </div>
+ <div class="card">
+   <h3>Chocolate Brownie</h3>
+   <p>Starts at ₹99</p>
+ </div>
+</div>
+</section>
+<section id="download">
+  <h2>Get The QuickBite App</h2>
+ <p>Order faster, track live, get exclusive app-only deals.</p>
+ <p><strong>Helpline:</strong> 1800-999-8888 | <strong>Email:</strong> care@quickbite.in</p>
+ <button>Download for Android</button>
+ <button>Download for iOS</button>
+</section>
 
+<footer>
+<p>© 2026 QuickBite | A project by Kavya Panchagiri</p>
+</footer>
+</body>
+</html>

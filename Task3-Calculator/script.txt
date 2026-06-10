@@ -1,0 +1,52 @@
+const screen = document.getElementById('display');
+function appendValue(num) {
+    if (screen.value === 'Error' || screen.value === 'Cannot divide by 0') {
+        screen.value = '';
+    }
+    screen.value += num;
+}
+function clearDisplay() {
+    screen.value = '';
+}
+function deleteLast() {
+    screen.value = screen.value.slice(0, -1);
+}
+function calculate() {
+    let expression = screen.value;
+    
+    if (expression === '') return;
+    
+    expression = expression.replace(/×/g, '*');
+    
+    try {
+        let result = Function('return ' + expression)();
+        
+        if (result === Infinity || result === -Infinity) {
+            screen.value = 'Cannot divide by 0';
+            setTimeout(() => { screen.value = '' }, 1500);
+        } else if (isNaN(result)) {
+            screen.value = 'Error';
+            setTimeout(() => { screen.value = '' }, 1500);
+        } else {
+            screen.value = parseFloat(result.toFixed(8));
+        }
+    } catch (err) {
+        screen.value = 'Error';
+        setTimeout(() => { screen.value = '' }, 1500);
+    }
+}
+
+document.addEventListener('keydown', (event) => {
+    if (event.key >= '0' && event.key <= '9' || event.key === '.') {
+        appendValue(event.key);
+    } else if (event.key === '+' || event.key === '-' || event.key === '*' || event.key === '/') {
+        appendValue(event.key);
+    } else if (event.key === 'Enter') {
+        event.preventDefault();
+        calculate();
+    } else if (event.key === 'Backspace') {
+        deleteLast();
+    } else if (event.key === 'Escape') {
+        clearDisplay();
+    }
+});
